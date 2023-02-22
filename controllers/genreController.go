@@ -59,6 +59,7 @@ func CreateGenre() gin.HandlerFunc {
 		newGenre := models.Genre{
 			Id:   primitive.NewObjectID(),
 			Name: genre.Name,
+			genre_id: genre.genre_id
 		}
 
 		result, err := genreCollection.InsertOne(ctx, newGenre)
